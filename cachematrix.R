@@ -3,16 +3,16 @@
 ## Create a matrix object that can cache its inverse
 
 makeCacheMatrix <- function( m = matrix() ) {
-    i <- NULL
+    inv <- NULL
     set <- function( matrix ) {
         m <<- matrix
-        i <<- NULL
+        inv <<- NULL
     }
     get <- function() m
     
-    setInverse <- function(inverse) i <<- inverse
+    setInverse <- function(inverse) inv <<- inverse
     
-    getInverse <- function() i
+    getInverse <- function() inv
 
     list(set = set, get = get,
          setInverse = setInverse,
